@@ -3,6 +3,7 @@ import './App.css'
 import axios from 'axios';
 import Climate from './components/Climate';
 import Loading from './components/Loading';
+import video from '/public/image/pexels-magda-ehlers-3040808-3840x2160-30fps.mp4'
 
 function App() {
   const [latlon, setLatlon] = useState()
@@ -51,7 +52,7 @@ function App() {
       </div>
 
       <video muted autoPlay loop>
-        <source src="/public/image/pexels-magda-ehlers-3040808-3840x2160-30fps.mp4"/>
+        <source src={video}/>
       </video>
 
       {
