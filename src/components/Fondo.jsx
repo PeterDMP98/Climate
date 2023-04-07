@@ -19,8 +19,6 @@ const Fondo = ({forecast}) => {
 
   const fondos= String(forecast)
 
-  console.log(fondos);
-
   return (
     <div>
       <div className='capa'>

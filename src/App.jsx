@@ -4,14 +4,16 @@ import axios from 'axios';
 import Climate from './components/Climate';
 import Loading from './components/Loading';
 import './loading.css'
-
 import Fondo from './components/Fondo';
 
 function App() {
+  
+  /*datos del estado del clima */
   const [latlon, setLatlon] = useState()
   const [weather, setWeather] = useState()
   const [temperature, setTemperature] = useState()
 
+  /*longtiud y latitud */
   useEffect(() => {
 
     const success = position => {
@@ -29,6 +31,7 @@ function App() {
 
   }, []) +
 
+  /*api: estado del clima */
     useEffect(() => {
       if (latlon) {
         const ApiKey = `313f7d89f41d329d57e1f5b25d45aaab`;
@@ -45,8 +48,6 @@ function App() {
 
     }, [latlon])
 
-
-
   return (
     <div className="App">
       {
@@ -58,9 +59,9 @@ function App() {
             />
             <div className='capa'>
             </div>
-            <Fondo forecast={weather?.weather[0].icon}/>
+            <Fondo forecast={weather?.weather[0].icon} />
           </div>
-          : <Loading hour={weather?.weather[0].icon}/>
+          : <Loading hour={weather?.weather[0].icon} />
       }
     </div>
   )
