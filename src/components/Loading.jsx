@@ -45,15 +45,6 @@ const Loading = ({ hour, error }) => {
             </div>
         }
 
-        {/* {
-          sunMoon.includes("d") 
-          ?<div className='sun'>
-          <img src={sun} alt="sun" />
-          </div>
-          : <div className='moon'>
-          <img src={moon} alt="mon" />
-          </div>
-        } */}
       </div>
     </div>
   )
