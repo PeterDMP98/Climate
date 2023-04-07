@@ -13,6 +13,9 @@ function App() {
   const [weather, setWeather] = useState()
   const [temperature, setTemperature] = useState()
 
+  /*error de ubicacion */
+  const [hasError, setHasError] = useState(false)
+
   /*longtiud y latitud */
   useEffect(() => {
 
@@ -26,6 +29,7 @@ function App() {
 
     const error = err => {
       console.log(err);
+      setHasError(true)
     }
     navigator.geolocation.getCurrentPosition(success, error)
 
@@ -61,7 +65,7 @@ function App() {
             </div>
             <Fondo forecast={weather?.weather[0].icon} />
           </div>
-          : <Loading hour={weather?.weather[0].icon} />
+          : <Loading hour={weather?.weather[0].icon} error={hasError} />
       }
     </div>
   )

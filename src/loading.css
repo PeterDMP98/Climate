@@ -21,6 +21,11 @@
     position: fixed;
     z-index: 5;
 }
+.sun > h1{
+    position: relative;
+    z-index: 1000;
+    color: rgb(220, 219, 219);
+}
 
 .sun > img{
     width: 300px;
