@@ -19,6 +19,8 @@ const Fondo = ({forecast}) => {
 
   const fondos= String(forecast)
 
+  console.log(fondos);
+
   return (
     <div>
       <div className='capa'>
@@ -26,7 +28,7 @@ const Fondo = ({forecast}) => {
       </div>
 
       {
-        fondos.includes("01d" || " 02d") /*dia soliado*/
+        fondos.includes("01d") || fondos.includes("02d") /*dia soliado*/
           ? <video muted autoPlay loop>
             <source src={dia1} />
           </video>
@@ -36,7 +38,7 @@ const Fondo = ({forecast}) => {
               <source src={diaNubes} />
             </video>
 
-            : fondos.includes("01n" || " 02n") /*noche despejada*/
+            : fondos.includes("01n") || fondos.includes("02n")/*noche despejada*/
               ? <video muted autoPlay loop>
                 <source src={noche1} />
               </video>
@@ -56,17 +58,17 @@ const Fondo = ({forecast}) => {
                       <source src={nocheNublado} />
                     </video>
 
-                    : fondos.includes("09d" || "10d") /*lluvia dia*/
+                    : fondos.includes("09d") || fondos.includes("10d") /*lluvia dia*/
                       ? <video muted autoPlay loop>
                         <source src={diaLluvia} />
                       </video>
 
-                      : fondos.includes("09n" || "10n") /*lluvia noche*/
+                      : fondos.includes("09n") || fondos.includes("10n") /*lluvia noche*/
                         ? <video muted autoPlay loop>
                           <source src={nocheLluvia} />
                         </video>
 
-                        : fondos.includes("11d" || "11n") /*tormentas*/
+                        : fondos.includes("11d") || fondos.includes("11n")/*tormentas*/
                           ? <video muted autoPlay loop>
                             <source src={tormenta} />
                           </video>
