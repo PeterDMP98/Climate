@@ -3,10 +3,9 @@ import './App.css'
 import axios from 'axios';
 import Climate from './components/Climate';
 import Loading from './components/Loading';
+import './loading.css'
 
 import Fondo from './components/Fondo';
-
-
 
 function App() {
   const [latlon, setLatlon] = useState()
@@ -61,7 +60,7 @@ function App() {
             </div>
             <Fondo forecast={weather?.weather[0].icon}/>
           </div>
-          : <Loading />
+          : <Loading hour={weather?.weather[0].icon}/>
       }
     </div>
   )

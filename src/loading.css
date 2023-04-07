@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    background-color: rgb(86, 61, 252);
+}
+
+.loading{
+    position: relative;
+}
+
+.cielo{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun{
+    position: fixed;
+    z-index: 5;
+}
+
+.sun > img{
+    width: 300px;
+    animation-name: sun;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    box-shadow:inset 0 0 100px 50px yellow, 0 0 50px 20px yellow;
+}
+
+@keyframes sun {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.moon{
+    position: fixed;
+    z-index: 5;
+}
+
+.moon > img{
+    width: 300px;
+    animation-name: moon;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    box-shadow:inset 0 0 100px 50px rgb(240, 240, 240), 0 0 50px 20px rgb(143, 248, 255);
+}
+
+@keyframes moon {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.clouds > img{
+    width: 100px;
+    position: fixed;
+}
+
+.clouds > img:nth-child(1){
+    z-index: 10;
+    top: 1%;
+    left: 1%;
+    animation-name: nube1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube1 {
+    0%{
+        left: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        left: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(2){
+    z-index: 0;
+    top: 5%;
+    right: 1%;
+
+    animation-name: nube2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube2 {
+    0%{
+        right: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        right: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(3){
+    z-index: 20;
+    bottom: 1%;
+    left: 5%;
+
+    animation-name: nube3;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube3 {
+    0%{
+        left: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        left: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(4){
+    z-index: 0;
+    bottom: 10%;
+    right: 1%;
+
+    animation-name: nube4;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube4 {
+    0%{
+        right: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        right: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(5){
+    z-index: 10;
+    left: 15%;
+
+    animation-name: nube5;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube5 {
+    0%{
+        left: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        left: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(6){
+    z-index: 5;
+    top: 15%;
+    left: 3%;
+
+    animation-name: nube6;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube6 {
+    0%{
+        left: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        left: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(7){
+    z-index: 0;
+    top: 40%;
+    right: 10%;
+
+    animation-name: nube7;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube7 {
+    0%{
+        right: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        right: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(8){
+    z-index: 15;
+    top: 1%;
+    left: 30%;
+
+    animation-name: nube8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube8 {
+    0%{
+        left: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        left: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(9){
+    z-index: 20;
+    bottom: 5%;
+    right: 20%;
+
+    animation-name: nube9;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube9 {
+    0%{
+        right: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        right: 90%;
+        opacity: 0.8;
+    }
+}
+
+.clouds > img:nth-child(10){
+    z-index: 1;
+    top: 25%;
+    right: 20%;
+
+    animation-name: nube10;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes nube10 {
+    0%{
+        right: 1%;
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        right: 90%;
+        opacity: 0.8;
+    }
+}

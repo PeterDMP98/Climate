@@ -10,7 +10,7 @@ const Climate = ({ weather, temperature }) => {
     return (
         <article className="clima">
             <div className="content-targ">
-                <h1>Water Ap</h1>
+                <h1>Weather App</h1>
                 <div className="country">
                     <h2>{weather?.name}/ {weather?.sys.country}</h2>
                 </div>
